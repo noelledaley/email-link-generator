@@ -1,0 +1,70 @@
+<div class="form">
+  <form class="email-form" {{on "submit" @updateData}}>
+    <label>
+      Title
+      <input
+        required=""
+        class="input-item"
+        name="title"
+        value=""
+        placeholder="title/person to contact"
+      />
+    </label>
+    <label>
+      Email
+      <input
+        required=""
+        class="input-item"
+        name="email"
+        value=""
+        placeholder="email adddress of person to contact"
+      />
+    </label>
+    <label>
+      Subject Line
+      <input
+        required=""
+        class="input-item"
+        name="subject"
+        value=""
+        placeholder="email subject line"
+      />
+    </label>
+    <label>
+      Email body
+      <input
+        required=""
+        class="input-item"
+        name="body"
+        value=""
+        placeholder="the message to send in the email"
+      />
+    </label>
+    <button type="submit" class="button">
+      Prepare My Email
+    </button>
+  </form>
+
+
+  <!-- actual links -->
+  <a
+    rel="noreferrer"
+    class="button__container"
+    target="_blank"
+    href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=keith.ellison@state.mn.us&su=I%2C%20Noelle%2C%20demand%20justice%20for%20George%20Floyd&body=Attorney%20General%20Ellison%2C%0A%0AMy%20name%20is%20Noelle%20Daley.%20I%20live%20in%20Portland%2C%20Oregon%2C%20but%20I%20am%20appalled%20enough%20about%20recent%20events%20in%20Minneapolis%20to%20take%20the%20time%20to%20write%20in.%0A%0AI%20am%20demanding%20justice%20for%20George%20Floyd%2C%20a%20Black%20man%20who%20was%20murdered%20in%20cold%20blood%20by%20four%20Minneapolis%20Police%20Department%20officers%20on%20May%2025%2C%202020.%20This%20incident%20was%20caught%20on%20video%20by%20multiple%20sources%2C%20including%20but%20not%20limited%20to%20the%20one%20linked%2C%20all%20of%20which%20clearly%20prove%20the%20guilt%20of%20the%20officers%20in%20question.%0A%0AI%20am%20appreciative%20that%20all%20four%20of%20the%20officers%20involved%20were%20charged%2C%20and%20additionally%2C%20that%20you%20have%20increased%20charges%20against%20Derek%20Chauvin%20to%20a%202nd%20degree%20murder%3B%20however%2C%20justice%20for%20George%20Floyd%20will%20not%20be%20served%20until%20these%20officers%20are%20convicted%20appropriately%20for%20their%20crimes.%20It%20is%20imperative%20that%20the%20court%20sees%20this%20case%20for%20what%20it%20is%3A%20an%20unwarranted%20and%20racially-motivated%20murder.%0A%0AUnfortunately%2C%20while%20convictions%20for%20these%20officers%20is%20a%20great%20first%20step%2C%20it%20is%20not%20nearly%20enough%E2%80%94racially-motivated%20crimes%20like%20these%20are%20not%20isolated%20incidents.%20Racial%20prejudice%20is%20deeply%20rooted%20in%20the%20criminal%20justice%20system%2C%20and%20it%20takes%20systemic%20change%20to%20decrease%20the%20prevalence%20of%20racially-motivated%20violence%20on%20civilians%20by%20police%20officers.%20Please%20keep%20this%20in%20mind%20as%20you%20preside%20over%20the%20George%20Floyd%20case%2C%20and%20take%20this%20to%20heart%20as%20you%20continue%20to%20serve%20as%20Attorney%20General%20for%20the%20state%20of%20Minnesota.%20%0A%0AI%20appreciate%20your%20consideration%20of%20these%20topics%2C%20and%20trust%20that%20you%20and%20the%20jury%20will%20do%20the%20right%20thing.%0A%0ASincerely%2C%0ANoelle%20Daley"
+  >
+    <button class="gmail-send button">
+      Open In Gmail
+    </button>
+  </a>
+  <a
+    rel="noreferrer"
+    target="_blank"
+    class="button__container"
+    href="mailto:keith.ellison@state.mn.us?subject=I%2C%20Noelle%2C%20demand%20justice%20for%20George%20Floyd&body=Attorney%20General%20Ellison%2C%0A%0AMy%20name%20is%20Noelle%20Daley.%20I%20live%20in%20Portland%2C%20Oregon%2C%20but%20I%20am%20appalled%20enough%20about%20recent%20events%20in%20Minneapolis%20to%20take%20the%20time%20to%20write%20in.%0A%0AI%20am%20demanding%20justice%20for%20George%20Floyd%2C%20a%20Black%20man%20who%20was%20murdered%20in%20cold%20blood%20by%20four%20Minneapolis%20Police%20Department%20officers%20on%20May%2025%2C%202020.%20This%20incident%20was%20caught%20on%20video%20by%20multiple%20sources%2C%20including%20but%20not%20limited%20to%20the%20one%20linked%2C%20all%20of%20which%20clearly%20prove%20the%20guilt%20of%20the%20officers%20in%20question.%0A%0AI%20am%20appreciative%20that%20all%20four%20of%20the%20officers%20involved%20were%20charged%2C%20and%20additionally%2C%20that%20you%20have%20increased%20charges%20against%20Derek%20Chauvin%20to%20a%202nd%20degree%20murder%3B%20however%2C%20justice%20for%20George%20Floyd%20will%20not%20be%20served%20until%20these%20officers%20are%20convicted%20appropriately%20for%20their%20crimes.%20It%20is%20imperative%20that%20the%20court%20sees%20this%20case%20for%20what%20it%20is%3A%20an%20unwarranted%20and%20racially-motivated%20murder.%0A%0AUnfortunately%2C%20while%20convictions%20for%20these%20officers%20is%20a%20great%20first%20step%2C%20it%20is%20not%20nearly%20enough%E2%80%94racially-motivated%20crimes%20like%20these%20are%20not%20isolated%20incidents.%20Racial%20prejudice%20is%20deeply%20rooted%20in%20the%20criminal%20justice%20system%2C%20and%20it%20takes%20systemic%20change%20to%20decrease%20the%20prevalence%20of%20racially-motivated%20violence%20on%20civilians%20by%20police%20officers.%20Please%20keep%20this%20in%20mind%20as%20you%20preside%20over%20the%20George%20Floyd%20case%2C%20and%20take%20this%20to%20heart%20as%20you%20continue%20to%20serve%20as%20Attorney%20General%20for%20the%20state%20of%20Minnesota.%20%0A%0AI%20appreciate%20your%20consideration%20of%20these%20topics%2C%20and%20trust%20that%20you%20and%20the%20jury%20will%20do%20the%20right%20thing.%0A%0ASincerely%2C%0ANoelle%20Daley"
+  >
+    <button class="button">
+      Open In Default Mail App
+    </button>
+  </a>
+</div>
