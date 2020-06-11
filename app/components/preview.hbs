@@ -1,5 +1,29 @@
-<div>
-  <textarea>
-    {{@text}}
-  </textarea>
-</div>
+<form class="preview">
+  <label>
+    Email
+    <input
+      disabled
+      class="input-item"
+      name="email"
+      value={{@email}}
+    />
+  </label>
+  <label>
+    Subject
+    <input
+      disabled
+      class="input-item"
+      name="subject"
+      value={{@subject}}
+    />
+  </label>
+  <label>
+    Email body
+    <textarea
+      disabled
+      class="input-item"
+      name="body"
+      value={{@body}}
+    />
+  </label>
+</form>

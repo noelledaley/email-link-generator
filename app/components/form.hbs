@@ -17,7 +17,7 @@
         class="input-item"
         name="email"
         value=""
-        placeholder="email adddress of person to contact"
+        placeholder="email address of person to contact"
       />
     </label>
     <label>
@@ -32,12 +32,12 @@
     </label>
     <label>
       Email body
-      <input
+      <textarea
         required=""
         class="input-item"
         name="body"
-        value=""
-        placeholder="the message to send in the email"
+        value={{@body}}
+        placeholder="the message you would like to send"
       />
     </label>
     <button type="submit" class="button">
