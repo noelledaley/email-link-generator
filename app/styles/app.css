@@ -4,13 +4,19 @@ body {
   font-size: 12pt;
 }
 
-.container {
-	display: flex;
+ .container {
+  padding: 30px;
+ }
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.form {
-  width: 100%;
-}
+.form-container {
+   width: 100%;
+ }
 
 .input-item {
   display: block;
@@ -33,7 +39,7 @@ label {
 .button {
   text-decoration: none;
   padding: 10px 30px;
-  margin: 10px;
+  margin: 10px 0;
   font: inherit;
   cursor: pointer;
   display: block;
