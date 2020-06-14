@@ -1,11 +1,21 @@
+<input disabled class="input-item" name="link" value={{@link}} />
+
+<CopyButton
+  class="copy-button"
+  @clipboardText={{@link}}
+  @success={{action (mut isCopied) "Copied!"}}
+>
+  {{if isCopied "Copied to clipboard!" "Copy to clipboard"}}
+</CopyButton>
+
 <div>
   <a
     rel="noreferrer"
-    class="button__container"
+    class="button-container"
     target="_blank"
     href={{@link}}
   >
-    <button class="gmail-send button">
+    <button class="button">
       {{@text}}
     </button>
   </a>
