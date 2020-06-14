@@ -5,11 +5,6 @@
   <div class="grid">
     <Form @updateData={{this.updateData}} @body={{this.body}} />
     <div>
-      <Preview
-        @email={{this.email}}
-        @subject={{this.subject}}
-        @body={{this.body}}
-      />
       <EmailButton @link={{this.gmailLink}} @text='Send in Gmail'/>
       <EmailButton @link={{this.emailLink}} @text='Send with Default Mail App'/>
     </div>
