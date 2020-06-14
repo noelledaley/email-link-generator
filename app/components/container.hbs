@@ -5,8 +5,9 @@
   <div class="grid">
     <Form @updateData={{this.updateData}} @body={{this.body}} />
     <div>
-      <EmailButton @link={{this.gmailLink}} @text='Send in Gmail'/>
-      <EmailButton @link={{this.emailLink}} @text='Send with Default Mail App'/>
+      <h2>Links</h2>
+      <EmailButton @link={{this.gmailLink}} @text='Gmail'/>
+      <EmailButton @link={{this.emailLink}} @text='Default Mail App'/>
     </div>
   </div>
 </div>
