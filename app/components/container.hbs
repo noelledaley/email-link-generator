@@ -10,7 +10,8 @@
         @subject={{this.subject}}
         @body={{this.body}}
       />
-      <EmailButton />
+      <EmailButton @link={{this.gmailLink}} @text='Send in Gmail'/>
+      <EmailButton @link={{this.emailLink}} @text='Send with Default Mail App'/>
     </div>
   </div>
 </div>

@@ -6,7 +6,11 @@ import { assign } from "@ember/polyfills";
 export default class ContainerComponent extends Component {
   @tracked email = "";
   @tracked subject = "";
-  @tracked body = `Dear [TITLE],\n\nYour email will preview here.\n\nSincerely,\n[FULL NAME]`;
+  @tracked
+  body = `Dear [TITLE],\n\nYour email will preview here.\n\nSincerely,\n[FULL NAME]`;
+
+  @tracked gmailLink = "";
+  @tracked emailLink = "";
 
   @action
   updateData(evt) {
@@ -17,22 +21,27 @@ export default class ContainerComponent extends Component {
 
   @action
   buildEmailPreview(formData) {
-    return formData.forEach((formField) => {
+    formData.forEach((formField) => {
       const item = formField.name;
-      return this[item] = formField.value;
+      return (this[item] = formField.value);
     });
+    this.buildGmailLink();
+    this.buildEmailLink();
   }
 
   @action
-  buildGmailLink(email, body, subject) {
-    return `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&su=${encodeURIComponent(
+  buildGmailLink() {
+    const { email, subject, body } = this;
+    return (this.gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&su=${encodeURIComponent(
       subject
-    )}&body=${encodeURIComponent(body)}`;
+    )}&body=${encodeURIComponent(body)}`);
   }
 
-  buildEmailLink(email, body, subject) {
-    return `mailto:${email}?subject=${encodeURIComponent(
+  @action
+  buildEmailLink() {
+    const { email, subject, body } = this;
+    return (this.emailLink = `mailto:${email}?subject=${encodeURIComponent(
       subject
-    )}&body=${encodeURIComponent(body)}`;
+    )}&body=${encodeURIComponent(body)}`);
   }
 }
