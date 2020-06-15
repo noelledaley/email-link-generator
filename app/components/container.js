@@ -11,6 +11,8 @@ export default class ContainerComponent extends Component {
   @tracked gmailLink = "";
   @tracked emailLink = "";
 
+  @tracked copiedLink = '';
+
   @action
   updateData(evt) {
     evt.preventDefault();
@@ -42,5 +44,10 @@ export default class ContainerComponent extends Component {
     return (this.emailLink = `mailto:${email}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`);
+  }
+
+  @action
+  copyAndClear(link){
+    return (this.copiedLink = link);
   }
 }

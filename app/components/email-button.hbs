@@ -6,8 +6,8 @@
   <CopyButton
     class="button"
     @clipboardText={{@link}}
-    @success={{action (mut isCopied)}}
+    @success={{fn @onCopy @link}}
   >
-    {{if isCopied "Copied!" "Copy"}}
+    {{if this.isCopied "Copied!" "Copy"}}
   </CopyButton>
 </div>

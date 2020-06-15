@@ -1,7 +1,10 @@
 import Component from '@glimmer/component';
-import { tracked } from "@glimmer/tracking";
-
 
 export default class EmailButtonComponent extends Component {
-  @tracked isCopied = false;
+  get isCopied(){
+    if (this.args.link && this.args.copiedLink) {
+      return this.args.link === this.args.copiedLink;
+    }
+    return false
+  }
 }
