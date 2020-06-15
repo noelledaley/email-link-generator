@@ -2,24 +2,25 @@
   <h2>Enter Template</h2>
   <form class="email-form" {{on "submit" @updateData}}>
     <label>
-      Email
+      Email(s)
       <input
         type="email"
+        multiple
         required=""
         class="input-item"
         name="email"
         value=""
-        placeholder="email address of person to contact"
+        placeholder="enter one or more email addresses, separated by a comma"
       />
     </label>
     <label>
-      Subject Line
+      Subject
       <input
         required=""
         class="input-item"
         name="subject"
         value=""
-        placeholder="email subject line"
+        placeholder="enter a subject"
       />
     </label>
     <label>
