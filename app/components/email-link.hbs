@@ -1,13 +1,16 @@
 <div class="email-link-container">
-  <label>
-    {{@text}} Link
-    <input disabled class="input-item with-copy" name="link" value={{@link}} />
+  <label for={{@text}}>
+    {{@text}}
+    Link
   </label>
-  <CopyButton
-    class="button"
-    @clipboardText={{@link}}
-    @success={{fn @onCopy @link}}
-  >
-    {{if this.isCopied "Copied!" "Copy"}}
-  </CopyButton>
+  <div class="copy-links">
+    <input disabled class="input-item" name={{@text}} value={{@link}} />
+    <CopyButton
+      class="button"
+      @clipboardText={{@link}}
+      @success={{fn @onCopy @link}}
+    >
+      {{if this.isCopied "Copied!" "Copy"}}
+    </CopyButton>
+  </div>
 </div>
