@@ -2,7 +2,7 @@
   <h2>Enter Template</h2>
   <form class="email-form" {{on "submit" @updateData}}>
     <label>
-      Email(s)
+      To:
       <input
         type="email"
         multiple
@@ -14,7 +14,7 @@
       />
     </label>
     <label>
-      Subject
+      Subject:
       <input
         required=""
         class="input-item"
@@ -24,7 +24,7 @@
       />
     </label>
     <label>
-      Email body
+      Body:
       <textarea
         required=""
         class="input-item"
@@ -34,7 +34,7 @@
       />
     </label>
     <button type="submit" class="button">
-      Prepare My Email
+      Generate link
     </button>
   </form>
 </div>

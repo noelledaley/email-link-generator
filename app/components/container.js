@@ -7,10 +7,7 @@ export default class ContainerComponent extends Component {
   @tracked subject = "";
   @tracked
   body = `Dear [TITLE],\n\nEnter the body of your email template here. \n\nSincerely,\n[FULL NAME]\n[CITY, STATE]`;
-
-  @tracked gmailLink = "";
   @tracked emailLink = "";
-
   @tracked copiedLink = '';
 
   @action
@@ -26,16 +23,7 @@ export default class ContainerComponent extends Component {
       const item = formField.name;
       return (this[item] = formField.value);
     });
-    this.buildGmailLink();
     this.buildEmailLink();
-  }
-
-  @action
-  buildGmailLink() {
-    const { email, subject, body } = this;
-    return (this.gmailLink = `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=${email}&su=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`);
   }
 
   @action
@@ -44,10 +32,5 @@ export default class ContainerComponent extends Component {
     return (this.emailLink = `mailto:${email}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`);
-  }
-
-  @action
-  copyAndClear(link){
-    return (this.copiedLink = link);
   }
 }
