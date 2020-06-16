@@ -2,14 +2,11 @@
   <h1>
     Magic Email Link Generator
   </h1>
-  <div class="grid">
-    <div class="grid-item">
+  <div>
+    <div>
       <Form @updateData={{this.updateData}} @body={{this.body}} />
     </div>
-    <div class="grid-item">
-      <h2>
-        Links
-      </h2>
+    <div>
       <EmailLink
         @link={{this.emailLink}}
         @text="Default Mail App"
