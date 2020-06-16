@@ -6,7 +6,7 @@ export default class ContainerComponent extends Component {
   @tracked email = "";
   @tracked subject = "";
   @tracked
-  body = `Dear [TITLE],\n\nEnter the body of your email template here. \n\nSincerely,\n[FULL NAME]\n[CITY, STATE]`;
+  body = `paste the body of your email here`;
   @tracked emailLink = "";
   @tracked copiedLink = '';
 
